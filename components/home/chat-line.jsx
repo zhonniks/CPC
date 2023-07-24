@@ -61,3 +61,4 @@ export function ChatLine({ role = 'assistant', content, isStreaming }) {
     </div>
   )
 }
+

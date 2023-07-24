@@ -1,49 +1,67 @@
 "use client";
-
-import Image from "next/image";
-import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
+import Link from "next/link";
 import { useSignInModal } from "./sign-in-modal";
 import UserDropdown from "./user-dropdown";
+import ContestDropdown from "./contest-dropdown";
+import { useState } from "react";
 
 export default function NavBar({ session }) {
   const { SignInModal, setShowSignInModal } = useSignInModal();
+  const [dropdown, setDropdown] = useState(false)
+
   const scrolled = useScroll(50);
+  const closeMobileMenu = () => setClick(false);
+
+  
 
   return (
     <>
-      <SignInModal />
-      <div
-        className={`fixed top-0 w-full ${scrolled
-          ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
-          : "bg-white/0"
-          } z-30 transition-all`}
-      >
-        <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
-          <Link href="/" className="flex items-center font-display text-2xl">
-            <Image
-              src="/n17r.png"
-              alt="N17R logo"
-              width="30"
-              height="30"
-              className="mr-2 rounded-sm"
-            ></Image>
-            <p>My First Project</p>
+    <SignInModal />
+    <div
+      className={`fixed top-0 w-full ${scrolled ? "bg-gradient-to-r from-black to-gray-900" : "bg-black"
+        } z-30 transition-all`}
+    >
+      <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
+        <Link href="/" className="flex items-center font-stylus text-2xl text-white"> {/* Changed text color to white */}
+          <p className="font-bold">AI Coach</p>
+        </Link>
+        <div className="flex space-x-8">
+          <Link href="/" className="text-white hover:text-blue-800 transition-colors"> {/* Changed text color to white */}
+            Chat
           </Link>
-          <div>
-            {session ? (
-              <UserDropdown session={session} />
-            ) : (
-              <button
-                className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-                onClick={() => setShowSignInModal(true)}
-              >
-                Sign In
-              </button>
-            )}
-          </div>
+          <Link href="/new" className="text-white hover:text-blue-800 transition-colors"> {/* Changed text color to white */}
+            Opens
+          </Link>
+
+          {session ? (
+            <ContestDropdown session={session} />
+          ) : (
+            <button
+              className="rounded-full border border-white bg-white text-mediumseagreen p-1.5 px-4 text-sm transition-all hover:bg-mediumseagreen hover:text-white"
+              onClick={() => setShowSignInModal(true)}
+            >
+            </button>
+          )}
+
+          <Link href="/new" className="text-white hover:text-blue-800 transition-colors"> {/* Changed text color to white */}
+            Sources
+          </Link>
+        </div>
+        <div>
+          {session ? (
+            <UserDropdown session={session} />
+          ) : (
+            <button
+              className="rounded-full border border-white bg-white text-mediumseagreen p-1.5 px-4 text-sm transition-all hover:bg-mediumseagreen hover:text-white"
+              onClick={() => setShowSignInModal(true)}
+            >
+              Sign In
+            </button>
+          )}
         </div>
       </div>
-    </>
+    </div>
+  </>
   );
 }
