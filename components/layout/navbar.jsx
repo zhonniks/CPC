@@ -1,11 +1,11 @@
 "use client";
 import useScroll from "@/lib/hooks/use-scroll";
+import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import ContestDropdown from "./contest-dropdown";
 import { useSignInModal } from "./sign-in-modal";
 import UserDropdown from "./user-dropdown";
-import ContestDropdown from "./contest-dropdown";
-import { useState } from "react";
-import Image from "next/image";
 
 export default function NavBar({ session }) {
   const { SignInModal, setShowSignInModal } = useSignInModal();
@@ -40,8 +40,7 @@ export default function NavBar({ session }) {
           <Link href="/new" className="text-white hover:text-blue-800 transition-colors"> 
             Opens
           </Link>
-  
-            <ContestDropdown />
+          <ContestDropdown />
         </div>
         <div>
           {session ? (
