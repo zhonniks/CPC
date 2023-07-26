@@ -37,12 +37,11 @@ export default function NavBar({ session }) {
           <Link href="/" className="text-white hover:text-blue-800 transition-colors"> {/* Changed text color to white */}
             Chat
           </Link>
-          <Link href="/new" className="text-white hover:text-blue-800 transition-colors"> {/* Changed text color to white */}
+          <Link href="/new" className="text-white hover:text-blue-800 transition-colors"> 
             Opens
           </Link>
-          session (
-            <ContestDropdown session={session} />
-          ) 
+  
+            <ContestDropdown />
         </div>
         <div>
           {session ? (
