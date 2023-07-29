@@ -8,7 +8,6 @@ export function Opens(props) {
                     <h3 className='opensName'>{props.name}</h3>
                     <div className='displayStack_1'>
                     <div className='opensUni'>{props.uni}</div>
-                        <div classNmae='opensDate'>{props.description}</div>
                     </div>
                 </div>
 

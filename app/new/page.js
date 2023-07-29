@@ -1,18 +1,38 @@
+'use client'
+import { useState } from "react";
 import { Opens } from 'app/opens';
-import opensContent from 'app/opensContent'
+import opensContent from 'app/opensContent';
+import Popup from 'app/popup';
 
 export default function Page() {
+  const [isOpenPopup, setIsOpenPopup] = useState(false);
+  const [selectedOpens, setSelectedOpens] = useState(null);
+
+  const handleOpenPopup = (opens) => {
+    setSelectedOpens(opens);
+    setIsOpenPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setSelectedOpens(null);
+    setIsOpenPopup(false);
+  };
+
   return (
     <div className='Page'>
-      {opensContent.map(opensContent => (
-        <Opens
-         key={opensContent.id}
-         image={opensContent.image}
-         name={opensContent.name}
-         uni={opensContent.uni}
-         description={opensContent.description}
-        />
+      {opensContent.map(opens => (
+        <div key={opens.id} onClick={() => handleOpenPopup(opens)}>
+          <Opens
+            key={opens.id}
+            image={opens.image}
+            name={opens.name}
+            uni={opens.uni}
+            description={opens.description}
+          />
+        </div>
       ))}
+      {isOpenPopup && <Popup opens={selectedOpens} onClose={handleClosePopup} />}
     </div>
   )
 }
+
