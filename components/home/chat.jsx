@@ -60,8 +60,8 @@ const InputMessage = ({ input, setInput, sendMessage, loading }) => {
   }, [questionError])
 
   return (
-    <div className="fixed bottom-0 right-0 bg-gradient-to-b from-transparent via-white to-white flex flex-col items-center clear-both" style={{ width: '900px', height: '150px' }}>
-    <div className="mx-auto my-4 flex-1 w-full md:mx-auto md:mb-[52px] lg:max-w-2xl xl:max-w-3xl">
+    <div className="fixed bottom-0 right-0 bg-gradient-to-b from-transparent via-white to-white flex flex-col items-center justify-center clear-both" style={{ width: '1300px', height: '150px' }}>
+    <div className="mx-auto flex-1 w-full md:mx-auto md:mb-[52px] lg:max-w-2xl xl:max-w-3xl">
       <div className="relative flex-1 flex-col rounded-md border-black/10 bg-white shadow-[0_0_10px_rgba(0,0,0,0.10)] sm:mr-auto">
         <input
           ref={inputRef}
