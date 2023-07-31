@@ -31,7 +31,9 @@ const ContestList = () => {
 
   return (
     <div className="container">
+      <div className="divider"></div> 
       <h1 className="title">Upcoming Contests</h1>
+      <div className="divider"></div> 
       <ul className="contest-list">
         {contests.map((contest) => (
           <li key={contest.id} className="contest-item">
@@ -52,3 +54,4 @@ const ContestList = () => {
 };
 
 export default ContestList;
+

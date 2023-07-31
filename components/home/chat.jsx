@@ -8,7 +8,6 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import { ChatLine, LoadingChatLine } from './chat-line'
 import ContestList from './contest_list'
-
 // default first message to display in UI (not necessary to define the prompt)
 export const initialMessages = [
   {
@@ -232,9 +231,9 @@ export default function Chat() {
 
   return (
     <div className="flex-1 w-full border-zinc-100 bg-white overflow-hidden flex">
-      <div className="w-1/4 bg-gray-200">
-        <ContestList />
-      </div>
+    <div className="w-1/4 bg-black ">
+      <ContestList />
+    </div>
       <div
         ref={chatContainerRef}
         className="flex-1 w-full relative max-h-[calc(100vh-4rem)] overflow-x-hidden"
