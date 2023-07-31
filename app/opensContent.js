@@ -91,8 +91,8 @@ const OpensData = [
         id: 5,
         image:
         "https://icpc.global/community/world-finals-champions/2018.jpg",
-        name: "International Collegiate Programming Contest (ICPC)",
-        uni: "Every year different country",
+        name: "International Collegiate Programming Contest",
+        uni: "",
         description:"-",
         q0:"ICPC OPEN registration dates",
         q1:"What is ICPC?",
@@ -114,7 +114,7 @@ const OpensData = [
         image:
         "https://content.dailynewshungary.com/wp-content/uploads/2019/08/International-Olympiad-in-Informatics-baku.jpg",
         name: "International Olympiad in Informatics ",
-        uni: "Every year different country",
+        uni: "",
         description:"-",
         q0:"IOI registration dates",
         q1:"What is IOI??",
