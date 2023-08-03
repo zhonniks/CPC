@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Opens } from 'app/opens';
 import opensContent from 'app/opensContent';
 import Popup from 'app/popup';
+import Footers from 'components/home/footer'; 
 
 export default function Page() {
   const [isOpenPopup, setIsOpenPopup] = useState(false);
@@ -19,7 +20,7 @@ export default function Page() {
   };
 
   return (
-    <div className='Page'>
+    <div className='Page' >
       {opensContent.map(opens => (
         <div key={opens.id} onClick={() => handleOpenPopup(opens)}>
           <Opens
@@ -35,4 +36,3 @@ export default function Page() {
     </div>
   )
 }
-

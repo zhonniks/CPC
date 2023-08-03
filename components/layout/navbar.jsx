@@ -34,7 +34,7 @@ export default function NavBar({ session }) {
             ></Image>
         </Link>
         <div className="flex space-x-8">
-          <Link href="/" className="text-white hover:text-blue-800 transition-colors"> {/* Changed text color to white */}
+          <Link href="/" className="text-white hover:text-blue-800 transition-colors"> 
             Chat
           </Link>
           <Link href="/new" className="text-white hover:text-blue-800 transition-colors"> 

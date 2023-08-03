@@ -1,0 +1,51 @@
+.pdf-list {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  list-style: disc; /* Set the list style to a bullet point */
+  font-size: 14px; /* Set the font size to 16 pixels */
+  margin: 10px 0; /* Set the top and bottom margin to 10 pixels and no left/right margin */
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:white;
+}
+
+.contest-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contest-item {
+  margin-bottom: 10px;
+}
+
+.contest-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contest-link:hover {
+  text-decoration: underline;
+}
+
+/* Custom CSS for the divider */
+.divider {
+height: 1px;
+width: 100%;
+background-color: #ccc;
+margin-bottom: 20px;
+}

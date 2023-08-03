@@ -5,20 +5,21 @@ import { Menu, Transition } from '@headlessui/react'
 import cx from 'classnames'
 
 export default function ContestDropdown({ session }) {
-  const handleRedirectACMP = () => {
-    window.open("https://acmp.ru/", "_blank");
+
+  const handleRedirectKBTUOPEN = ()     => {
+    window.location.href = "http://localhost:3000/archive/"; 
   };
 
-  const handleRedirectCodeforces = () => {
-    window.open("https://codeforces.com/", "_blank");
+  const handleRedirectSDUOPEN= () => {
+    window.location.href = "http://localhost:3000/sduopen/"; 
   };
 
-  const handleRedirectHackerRank = () => {
-    window.open("https://www.hackerrank.com/", "_blank");
+  const handleRedirectIITUOPEN= () => {
+    window.location.href = "http://localhost:3000/iituopen/"; 
   };
 
-  const handleRedirectAtCoder = () => {
-    window.open("https://atcoder.jp/", "_blank");
+  const handleRedirectNUOPEN = () => {  
+    window.location.href = "http://localhost:3000/nuopen/"; 
   };
  
 
@@ -27,7 +28,7 @@ export default function ContestDropdown({ session }) {
       <Menu as="div" className="relative ml-3">
         <div>
           <Menu.Button className="text-white hover:text-blue-800 transition-colors">
-           Problems
+           Archive
            
           </Menu.Button>
         </div>
@@ -45,9 +46,9 @@ export default function ContestDropdown({ session }) {
               {({ active }) => (
                 <button
                   className={cx(active ? 'bg-gray-100' : '', 'relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-sm text-gray-700')}
-                   onClick={handleRedirectACMP}
+                   onClick={handleRedirectKBTUOPEN}
                 >
-                  <p className="text-sm">ACMP</p>
+                  <p className="text-sm">KBTU OPEN</p>
                 </button>
               )}
             </Menu.Item>
@@ -55,9 +56,9 @@ export default function ContestDropdown({ session }) {
               {({ active }) => (
                 <button
                   className={cx(active ? 'bg-gray-100' : '', 'relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-sm text-gray-700')}
-                  onClick={handleRedirectCodeforces}
+                  onClick={handleRedirectSDUOPEN}
                 >
-                  <p className="text-sm">Codeforces</p>
+                  <p className="text-sm">SDU OPEN</p>
                 </button>
               )}
             </Menu.Item>
@@ -65,9 +66,9 @@ export default function ContestDropdown({ session }) {
               {({ active }) => (
                 <button
                   className={cx(active ? 'bg-gray-100' : '', 'relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-sm text-gray-700')}
-                  onClick={handleRedirectHackerRank}
+                  onClick={handleRedirectIITUOPEN}
                 >
-                  <p className="text-sm">HackerRank</p>
+                  <p className="text-sm">IITU OPEN</p>
                 </button>
               )}
             </Menu.Item>
@@ -75,9 +76,9 @@ export default function ContestDropdown({ session }) {
               {({ active }) => (
                 <button
                   className={cx(active ? 'bg-gray-100' : '', 'relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-sm text-gray-700')}
-                  onClick={handleRedirectAtCoder}
+                  onClick={handleRedirectNUOPEN}
                 >
-                  <p className="text-sm">Atcoder</p>
+                  <p className="text-sm">NU OPEN</p>
                 </button>
               )}
             </Menu.Item>
