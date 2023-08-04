@@ -41,6 +41,9 @@ export default function NavBar({ session }) {
             Opens
           </Link>
           <ContestDropdown />
+          <Link href="/timeline" className="text-white hover:text-blue-800 transition-colors"> 
+            History
+          </Link>
         </div>
         <div>
           {session ? (
