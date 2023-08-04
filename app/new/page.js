@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Opens } from 'app/opens';
 import opensContent from 'app/opensContent';
 import Popup from 'app/popup';
-import Footers from 'components/home/footer'; 
+
 
 export default function Page() {
   const [isOpenPopup, setIsOpenPopup] = useState(false);
