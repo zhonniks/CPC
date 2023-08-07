@@ -37,12 +37,18 @@ export default function NavBar({ session }) {
           <Link href="/" className="text-white hover:text-blue-800 transition-colors"> 
             Chat
           </Link>
+          <Link href="/aiSchedule" className="text-white hover:text-blue-800 transition-colors"> 
+            AI-Scheduler
+          </Link>
           <Link href="/new" className="text-white hover:text-blue-800 transition-colors"> 
             Opens
           </Link>
           <ContestDropdown />
           <Link href="/timeline" className="text-white hover:text-blue-800 transition-colors"> 
             History
+          </Link>
+          <Link href="/sources" className="text-white hover:text-blue-800 transition-colors"> 
+            Helpful sources
           </Link>
         </div>
         <div>
