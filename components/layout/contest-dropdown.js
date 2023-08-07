@@ -7,19 +7,19 @@ import cx from 'classnames'
 export default function ContestDropdown({ session }) {
 
   const handleRedirectKBTUOPEN = ()     => {
-    window.location.href = "http://localhost:3000/archive/"; 
+    window.location.href = "https://front-one-dusky.vercel.app/archive"; 
   };
 
   const handleRedirectSDUOPEN= () => {
-    window.location.href = "http://localhost:3000/sduopen/"; 
+    window.location.href = "https://front-one-dusky.vercel.app/sduopen"; 
   };
 
   const handleRedirectIITUOPEN= () => {
-    window.location.href = "http://localhost:3000/iituopen/"; 
+    window.location.href = "https://front-one-dusky.vercel.app/iituopen"; 
   };
 
   const handleRedirectNUOPEN = () => {  
-    window.location.href = "http://localhost:3000/nuopen/"; 
+    window.location.href = "https://front-one-dusky.vercel.app/nuopen"; 
   };
  
 
