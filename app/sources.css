@@ -1,0 +1,68 @@
+
+  .Page {
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .opensList {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+  }
+  
+  .opensCards {
+    position: relative;
+    background-color: black; /* Set the background color to black */
+    margin: 1rem;
+    flex: 1 0 15rem;
+    max-width: 900px;
+    max-height: 40rem;
+    transition: 0.2s;
+    border: 2px solid var(--color-border);
+    border-radius: 10px;
+  }
+  
+  .opensCard:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
+  }
+  
+  .opensImages {
+    margin-top: 2rem;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .opensCard__contents {
+    margin: 2rem;
+    color:white;
+  }
+  
+  .opensNames {
+    font-size: 1.5rem;
+    color:white;
+    margin:20px;
+  }
+  
+  .displayStack__1,
+  .displayStack__2 {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footerContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    background-color: var(--color-grey-primary);
+    padding: 1rem;
+  }
+  .opensUnis {
+    color:white;
+    margin:20px;
+  }
+  

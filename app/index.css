@@ -1,8 +1,8 @@
-:root {
-  --color-grey-primary: #f0f0f0;
-  --color-yellow-primary: goldenrod;
-  --color-orange-primary: darkorange;
-  --color-green-primary: mediumseagreen;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
 
 .Page {

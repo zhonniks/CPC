@@ -14,6 +14,8 @@ const App = () => {
     time: "",
   });
 
+  
+
   const inputs = [
     {
       id: 1,
@@ -77,7 +79,7 @@ const App = () => {
             onChange={onChange}
           />
         ))}
-        <button className="form-button">Generate</button>
+        <button  className="form-button">Generate</button>
       </form>
     </div>
   
