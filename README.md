@@ -1,7 +1,7 @@
 
 How to run this project? ->
 cd CPC ->
-pnpm install
+pnpm install ->
 While in the project folder, launch the development server:
 ```
 > npm run dev
