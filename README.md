@@ -1,6 +1,6 @@
 
-How to run this project? /br
-cd CPC /br
+How to run this project? ->
+cd CPC ->
 pnpm install
 While in the project folder, launch the development server:
 ```
